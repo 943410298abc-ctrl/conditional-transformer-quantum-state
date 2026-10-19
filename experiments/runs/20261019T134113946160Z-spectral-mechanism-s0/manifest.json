@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "run_id": "20261019T134113946160Z-spectral-mechanism-s0",
+  "created_at_utc": "20261019T134113946160Z",
+  "status": "completed",
+  "owner": "Bian-M-X/Codex",
+  "issue": 1,
+  "git_commit": "3bddd748a21d100b0b8b19758e41afda53951549",
+  "seed": 0,
+  "question": "How does restricting to known even parity change the energy-fidelity bound?",
+  "model": "exact spectral mechanism; no neural model",
+  "hamiltonian": "open TFIM, J=1, lambda=0, MSB-left",
+  "parameter_split": {
+    "train": null,
+    "validation": null,
+    "test": "N=4/6/8; h=0.2/0.35/0.8; diagnostic sweep"
+  },
+  "command": "python scripts/check_spectral_mechanism.py",
+  "environment": {
+    "python": "3.13.9",
+    "numpy": "2.3.5",
+    "scipy": "1.16.3",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "budget": {
+    "gradient_steps": 0,
+    "exact_diagonalizations": 18,
+    "wall_seconds": 0.2301993000000948,
+    "device": "cpu"
+  },
+  "oracle_access": {
+    "training": false,
+    "selection": false,
+    "evaluation": true,
+    "counterexample_construction": true
+  },
+  "metrics": {
+    "max_energy_identity_error": 1.0658141036401503e-14,
+    "max_variance_identity_error": 6.591949208711867e-16
+  },
+  "artifacts": [
+    "spectral.json"
+  ],
+  "notes": "Derived standard spectral identities; explicitly oracle diagnostic. Not a new theorem or deployed certificate."
+}
