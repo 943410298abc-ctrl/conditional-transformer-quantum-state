@@ -5,6 +5,33 @@
 **拟定题目**：近简并系统中条件神经网络量子态的可靠泛化与计算预算感知的自适应参数采样  
 **English**: Reliable Generalization and Budget-Aware Adaptive Parameter Sampling for Conditional Neural Quantum States near Quasi-Degeneracies
 
+## 第一轮研究入口（Issue #1，待独立复核）
+
+- [中文研究报告 PDF](docs/round1_report.pdf) / [可编辑正文](docs/round1_report.md)
+- [下一位协作者的接力记录](docs/handoffs/issue-1.md)、[考核要求与学习记录](docs/course_requirements.md)
+- [冻结实验协议](docs/round1_preregistration.md)、[完整表格](docs/results/round1/tables.md)、[运行索引](experiments/round1_index.json)
+- [文献与新颖性边界](docs/literature_round1.md)、[谱推导与反例](docs/theory_round1.md)、[历史材料审计](docs/audit/round1_archive_audit.md)
+
+本轮实跑12组 N=6 基准与一个同机重跑，支持先区分训练点失败与参数泛化。
+没有证明新主动采样方法或 ICLR 投稿成熟度；`docs/STATE.md` 的正式结论等待独立成员复核。
+
+研究环境建议使用隔离的 Python 3.13 venv（不继承 Anaconda 系统 site-packages）：
+
+```bash
+python -m venv .venv
+# Windows: .venv\Scripts\python.exe；Linux/macOS: .venv/bin/python
+.venv\Scripts\python.exe -m pip install torch==2.14.1 --index-url https://download.pytorch.org/whl/cpu
+.venv\Scripts\python.exe -m pip install -r requirements-research.txt
+.venv\Scripts\python.exe -m unittest discover -s tests -v
+.venv\Scripts\python.exe scripts/run_round1.py
+.venv\Scripts\python.exe scripts/verify_round1.py
+.venv\Scripts\python.exe scripts/summarize_round1.py
+```
+
+训练要求先提交 tracked 变更，以保证 manifest 对应实际代码。新复跑产生独立目录；汇总默认仍使用已提交的首轮索引，替换/追加分析索引必须显式记录。
+PDF 重建另需 `reportlab` 与 CJK 字体：`python scripts/build_round1_pdf.py --font PATH_TO_CJK_FONT`。
+Windows sandbox 若系统临时目录不可写，可将当前进程 `TEMP`/`TMP` 指向仓库 `tmp/`；勿通过允许重复 OpenMP 运行库来绕过依赖冲突。
+
 ## 开始协作（3 名研究者 + 各自 Agent；任务轮换）
 
 不按成员永久划分研究主线；按 **GitHub Issue → 独立分支 → 实验记录 → PR → 合并** 轮换接力。每个 Issue 有一个当前负责人，但后续可交给任何成员及其 Agent。Agent 的对话历史不视为项目记录。
@@ -44,7 +71,7 @@ tests/                             # 不依赖 ML 框架的基础检查
 
 ## 已有材料
 
-此前上传的 `研究主题与预试验报告.docx`、`预实验1.zip`、`预实验2.zip` 暂保留于仓库根目录，**不会自动宣称其内容可复现**。第一项工程任务应清点两份 ZIP，提取源代码、依赖与原始指标，并建立 `experiments/runs/` 中的追溯链接。未经复核不得把 ZIP 内结果登记为 confirmed。
+此前上传的报告位于 `docs/研究主题与预试验报告.docx`，两份 ZIP 位于 `experiments/预实验1.zip`、`experiments/预实验2.zip`，**不会自动宣称其内容可复现**。本轮已清点哈希、源码结构和部分原始指标，但没有完整重跑历史二维实验。未经独立复核不得把 ZIP 内结果登记为 confirmed。
 
 ## 本地快速检查
 

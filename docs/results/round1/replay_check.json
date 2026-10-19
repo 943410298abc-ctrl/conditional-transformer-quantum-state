@@ -1,0 +1,15 @@
+{
+  "scope": "same-machine deterministic replay, not independent researcher replication",
+  "original": "20261019T135010710747Z-round1-transformer-even-s17",
+  "replay": "20261019T135122926770Z-replay-transformer-even-s17",
+  "checks": {
+    "metrics.json": {
+      "exact_equal": true,
+      "records": 75
+    },
+    "training.json": {
+      "exact_equal": true,
+      "records": 12
+    }
+  }
+}

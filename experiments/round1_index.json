@@ -1,0 +1,20 @@
+{
+  "training_runs": [
+    "20261019T134953422202Z-round1-mlp-raw-s17",
+    "20261019T134956333827Z-round1-mlp-raw-s29",
+    "20261019T134957410981Z-round1-mlp-raw-s43",
+    "20261019T134958422745Z-round1-mlp-even-s17",
+    "20261019T134959517486Z-round1-mlp-even-s29",
+    "20261019T135000615904Z-round1-mlp-even-s43",
+    "20261019T135001759791Z-round1-transformer-raw-s17",
+    "20261019T135004800913Z-round1-transformer-raw-s29",
+    "20261019T135007716829Z-round1-transformer-raw-s43",
+    "20261019T135010710747Z-round1-transformer-even-s17",
+    "20261019T135013806249Z-round1-transformer-even-s29",
+    "20261019T135016952299Z-round1-transformer-even-s43"
+  ],
+  "spectral_runs": [
+    "20261019T134113946160Z-spectral-mechanism-s0"
+  ],
+  "selection": "all 12 prespecified jobs; no excluded seeds"
+}

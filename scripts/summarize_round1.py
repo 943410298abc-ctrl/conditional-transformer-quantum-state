@@ -67,15 +67,16 @@ def main():
                     rr=[r for r in rows if r['architecture']==arch and r['training_mode']==mode and r['method']==method and r['split']!='validation']
                     hs=sorted({r['h'] for r in rr})
                     groups=[[r[metric] for r in rr if r['h']==h] for h in hs]
-                    mean=np.array([np.mean(g) for g in groups]);sd=np.array([np.std(g,ddof=1) for g in groups])
+                    mean=np.array([np.mean(g) for g in groups])
+                    low=np.array([min(g) for g in groups]);high=np.array([max(g) for g in groups])
                     ax.plot(hs,mean,'.-',color=color,label=method)
-                    ax.fill_between(hs,mean-sd,mean+sd,color=color,alpha=.13)
+                    ax.fill_between(hs,low,high,color=color,alpha=.13)
                 for h in [.2,.8,1.4]: ax.axvline(h,color='gray',ls=':',lw=.8)
                 ax.set(xlabel='Transverse field h / J',ylabel=label,title=f'{arch}, {mode} training')
-                if metric!='fidelity':ax.set_yscale('symlog',linthresh=1e-5)
+                if metric!='fidelity':ax.set_yscale('log')
                 ax.grid(alpha=.2)
         axes[0,0].legend(fontsize=8)
-        fig.suptitle('N=6 open TFIM; 600 updates; mean +/- seed SD (n=3); dotted lines = train h')
+        fig.suptitle('N=6 open TFIM; 600 updates; mean and seed range (n=3); dotted lines = train h')
         fig.savefig(output/f'{arch}_generalization.png',dpi=160);plt.close(fig)
     # Frozen split diagram; no metric-dependent point selection.
     cfg=json.loads((ROOT/'experiments/configs/round1.json').read_text())
