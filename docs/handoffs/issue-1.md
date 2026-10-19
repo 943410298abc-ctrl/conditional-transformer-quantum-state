@@ -4,6 +4,7 @@
 - Driver: Codex，受 Bian-M-X 授权研究和推送；没有代替其他成员署名或独立评审。
 - Branch: `issue/1-topic12-audit`
 - Issue: https://github.com/Bian-M-X/conditional-transformer-quantum-state/issues/1
+- Draft PR: https://github.com/Bian-M-X/conditional-transformer-quantum-state/pull/2
 - Status: needs-review
 - Core implementation commit: `3bddd74`; primary training code commit: `3ef2378429d628772fd5a7935d1b1112122c9da7`
 - 正式研究结论仍未提升至 STATE confirmed。
@@ -53,6 +54,7 @@ Python3.13.9、torch2.14.1+cpu、numpy2.3.5、scipy1.16.3；所有训练CPU floa
 - 初建venv的ensurepip被sandbox临时目录权限阻止，升级权限后成功；第一次全测试因Anaconda MKL与PyTorch OpenMP冲突退出。局部安装标准NumPy/SciPy wheels后10测试全部通过，未启用KMP_DUPLICATE_LIB_OK。
 - PyPI主下载停滞，官方PyTorch索引缺SciPy；随后同版本清华镜像下载成功。依赖仅写项目venv。
 - 基础测试临时目录受sandbox限制时，将该命令的TEMP/TMP设为本仓库tmp后通过。
+- 初次远程scientific CI在setup-python缓存阶段失败：默认仅寻找requirements.txt/pyproject.toml，实际文件名是requirements-research.txt；已显式设置cache-dependency-path。该失败未运行科学测试，不是实验结果失败。
 - 批量训练工具会话完成所有输出后仍显示running；额外系统进程检查未发现run_round1.py在运行，独立重跑命令正常exit0。以独立manifest/指标和重跑核查作证据，不虚构批量工具返回的exit code。
 
 ## 下一位成员：先做这一条
