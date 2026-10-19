@@ -30,9 +30,12 @@ docs/
   RESEARCH_LOG.md                 # 重要阶段摘要（不记流水账）
   decisions/0001-collaboration.md # 不可变的决策记录，后续新增文件
   handoffs/_TEMPLATE.md          # Issue 对应的接力记录模板
+  研究主题与预实验报告.docx
 experiments/
   README.md                       # 实验记录标准
   runs/<run_id>/manifest.json     # 每次运行的独立记录
+  预实验1.zip
+  预实验2.zip
 src/                              # 后续模型、训练、评测模块
 scripts/new_run.py                # 为一次实验创建记录
 scripts/validate_workspace.py     # 校验仓库与实验记录结构
