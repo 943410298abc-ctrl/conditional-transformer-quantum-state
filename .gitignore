@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Large/generated outputs; keep small aggregate metrics and manifests in git
+checkpoints/
+outputs/
+logs/
+wandb/
+mlruns/
+data/raw/
+*.pt
+*.pth
+*.ckpt
+*.npy
+*.npz
+.DS_Store
