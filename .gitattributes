@@ -1,0 +1,5 @@
+# PDF streams can appear textual at the start; never normalize their line endings.
+*.pdf binary
+*.png binary
+*.docx binary
+*.zip binary
