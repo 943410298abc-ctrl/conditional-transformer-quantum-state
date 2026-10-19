@@ -1,0 +1,169 @@
+[
+  {
+    "path": "experiments/预实验1.zip",
+    "sha256": "1e65aa04121fac7d648b0644c42f4cd7f9369077b244f14ce9dc5f7b86359cd1",
+    "entries": [
+      {
+        "name": "11_12选题预研究报告.md",
+        "bytes": 11517,
+        "sha256": "b77f4bd6bcaa65a01ce7acf1669264d9d2f58c5812710921af758b728f4193a7"
+      },
+      {
+        "name": "nqs_prestudy.py",
+        "bytes": 10914,
+        "sha256": "d9bcd786c73350b7c2bff90f1afd9013db2080db2385fa95a7a641df9f4bedad"
+      },
+      {
+        "name": "tiny_transformer_trial.py",
+        "bytes": 2826,
+        "sha256": "0451c7a5b55548610b3f274c735f679b923335f2f8a260e8785d402eea2415bb"
+      },
+      {
+        "name": "make_prestudy_summary.py",
+        "bytes": 2947,
+        "sha256": "24698d62b9da2e86192d9696600606036f9a2f844531ac0e79574b2ddd027e77"
+      },
+      {
+        "name": "results/ar_900steps_seed41.json",
+        "bytes": 7445,
+        "sha256": "a7fb6bcc034918ffa81bacc83ab31a2fd979873bea1686da1bebd647c7ce6c38"
+      },
+      {
+        "name": "results/ar_900steps_seed45.json",
+        "bytes": 6063,
+        "sha256": "8e9a67690c45b32c2037b8f19b89cae13908fcd29e89741bd82a70539f05e898"
+      },
+      {
+        "name": "results/ar_900steps_seed49.json",
+        "bytes": 7454,
+        "sha256": "d57eb6dbd67b6e31a2681000682eb099360f8e6191671cf7235611c815154694"
+      },
+      {
+        "name": "results/mini_transformer_seed31.json",
+        "bytes": 3710,
+        "sha256": "e8c9c9c176c447486923a3616ad9adb79d84243c5c4900e8d670d9cd02f9eadb"
+      },
+      {
+        "name": "results/mini_transformer_seed32.json",
+        "bytes": 3693,
+        "sha256": "8a4219b5efc768a4056f17ede949111f9a0764e872d2b3b258a7cf12a247f9ed"
+      },
+      {
+        "name": "results/mini_transformer_seed33.json",
+        "bytes": 3726,
+        "sha256": "441030bff2dd71d031a200dfe05a2c50be59254dbe99980770cf872238d3528f"
+      },
+      {
+        "name": "results/rbm_1000steps.json",
+        "bytes": 7704,
+        "sha256": "31fb1ca0561a935c053414977b9bc0e69c91ec174e3db649a3fd133a584d26f5"
+      },
+      {
+        "name": "results/rbm_1000steps_h035.json",
+        "bytes": 3896,
+        "sha256": "cb93d7374091cd03f69002466a5d4d1d801b20c9f6ad6a6c91c269a9e7635882"
+      },
+      {
+        "name": "results/rbm_1000steps_h08.json",
+        "bytes": 3810,
+        "sha256": "27ea0895aae2c9b9c78fecbdb2810f216ba6ae3bd987bc40d495939256ecbcc6"
+      },
+      {
+        "name": "results/robustness_summary.png",
+        "bytes": 119797,
+        "sha256": "fa1175019f7490867a0f1286d6bc1fd73653e18f92f1c45d5d2e6c3dc50c34fd"
+      },
+      {
+        "name": "results/summary.json",
+        "bytes": 3898,
+        "sha256": "aceb84c0aeea6c6118eacc77533828c98fb1aac597e4d0af4d72c4628a4961f4"
+      },
+      {
+        "name": "results/symmetry_breaking_limit.png",
+        "bytes": 82046,
+        "sha256": "2a9d828ed8f18c910d0d03dba1596db213a1a36708fc972cb50ae54b7a8b3e9e"
+      }
+    ]
+  },
+  {
+    "path": "experiments/预实验2.zip",
+    "sha256": "f32dceb45e597cb0e488225d4b30f7b88c80d71c6a9ef1db8bbc19079043ad7c",
+    "entries": [
+      {
+        "name": "NQS_stage2/stage2_ar.json",
+        "bytes": 410234,
+        "sha256": "f1da57f71f2c17430d7cda9e39a4673105674211bcca0215d055f84e6d81f46f"
+      },
+      {
+        "name": "NQS_stage2/transformer_log.txt",
+        "bytes": 2270,
+        "sha256": "5c717e7d64adeae72c22461136a8a02cdbe4d4314f26de1afcb0ce2f1eded1e9"
+      },
+      {
+        "name": "NQS_stage2/two_level_results.json",
+        "bytes": 38622,
+        "sha256": "3cb5027b052ca500f432d00e4caa0ae2bf8cf7d37c1d3d23b6da082b9d8c6d4b"
+      },
+      {
+        "name": "NQS_stage2/README.md",
+        "bytes": 1547,
+        "sha256": "85b4975d6c58784e7b8ca084da4a6b3f9346ebaf4301bfe802faa91b3f979198"
+      },
+      {
+        "name": "NQS_stage2/two_level_checks.py",
+        "bytes": 3298,
+        "sha256": "b5687fbb396ce5acf174acc6499297ba4bce0155b1a37cb41711e15780e41971"
+      },
+      {
+        "name": "NQS_stage2/run_stage2.py",
+        "bytes": 9250,
+        "sha256": "fec83843768e161cbd1caaaa9624d334d11de38592d73e6d7ff7b54566f4fa46"
+      },
+      {
+        "name": "NQS_stage2/stage2_main.png",
+        "bytes": 265118,
+        "sha256": "00a3d970d0406568cd3dba87a4641255dfc1dd9d1fdefb53f814277e1fc8a758"
+      },
+      {
+        "name": "NQS_stage2/stage2_transformer.json",
+        "bytes": 413895,
+        "sha256": "61f07fbeee02803b637d71d5a2706588efcdff9eb112bb75b2d1f12a140db81f"
+      },
+      {
+        "name": "NQS_stage2/ar_log.txt",
+        "bytes": 2225,
+        "sha256": "db1364c4c395ef39296219e458628e0e5f68786bf21896e132227f4c90f6449b"
+      },
+      {
+        "name": "NQS_stage2/tiny_transformer_trial.py",
+        "bytes": 2867,
+        "sha256": "6cd218e3dd5ac87a92a4d7210574bf70fc322ffd71eaece7807c5aa598381bd6"
+      },
+      {
+        "name": "NQS_stage2/diagnostic_evaluation.py",
+        "bytes": 1959,
+        "sha256": "fcfa34bdcbaad7b371f0732e7243fb8e9fd33f1d3a707144bfa71d57b37f7bb0"
+      },
+      {
+        "name": "NQS_stage2/diagnostics_auc.json",
+        "bytes": 2417,
+        "sha256": "ddfa2512e48e22ac7bf46e1ded1ab1f9f4b62475ce98f64e4ff6fe18dbf35fe6"
+      },
+      {
+        "name": "NQS_stage2/two_level_crossover.png",
+        "bytes": 134591,
+        "sha256": "6bc510eb298a0524478e5b4231bf577e638bebf9914d3848d6f87160bdd6f822"
+      },
+      {
+        "name": "NQS_stage2/第二阶段预研究报告.md",
+        "bytes": 13869,
+        "sha256": "fa8e8de0c327a2b5fd0f06f46d9c0ae15abee6b40c61543b82d15c86d5000638"
+      },
+      {
+        "name": "NQS_stage2/nqs_prestudy.py",
+        "bytes": 10955,
+        "sha256": "09bc3b97d951fdc7514d123061687f149c33e3bc295f99fa75c7b12960471cc2"
+      }
+    ]
+  }
+]

@@ -28,3 +28,6 @@ data/raw/
 *.npy
 *.npz
 .DS_Store
+tmp/
+# Local course material: public redistribution permission is not established.
+/期末考核，研究选题手册(1).pdf
