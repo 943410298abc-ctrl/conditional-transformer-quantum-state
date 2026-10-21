@@ -152,6 +152,8 @@ def run_acquisition(cfg,arch,policy,seed,config_path,tag='round2b'):
         m['model']['parameters']=sum(p.numel() for p in model.parameters())
         m['budget']=dict(gradient_steps=steps,training_h_actions=train_actions,acquisition_h_actions=query_actions,
             total_training_selection_h_actions=train_actions+query_actions,training_model_calls=training_calls,acquisition_model_calls=query_calls,
+            h_action_scope='forward applications; backward and evaluation counted separately (ADR 0003)',
+            backward_h_actions=train_actions,total_with_backward_h_actions=2*train_actions+query_actions,
             evaluation_model_calls=eval_calls,postprocessing_h_actions=post_h,evaluation_h_actions=eval_h,
             exact_diagonalizations=len(train_lam)+len(cfg['test_lambda']),acquisition_seconds=acquisition_seconds,
             initialization_training_seconds=train_end-start-acquisition_seconds,fit_and_selection_seconds=train_end-start,
@@ -215,4 +217,15 @@ def main():
     dump(index_path,index)
 
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    try:
+        main()
+    except Exception:
+        index_path=ROOT/'experiments/round2_index.json'
+        if index_path.exists():
+            index=json.loads(index_path.read_text())
+            index['status']='partial'
+            index['failed_runs']=[p.parent.name for p in sorted((ROOT/'experiments/runs').glob('*round2*/manifest.json'))
+                                  if json.loads(p.read_text())['status']=='failed']
+            dump(index_path,index)
+        raise

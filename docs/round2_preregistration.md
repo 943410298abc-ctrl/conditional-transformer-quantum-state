@@ -2,6 +2,8 @@
 
 Drafted 2026-10-19; frozen for execution 2026-10-21, Issue #3. Repository prerecord before running new experiments; not an external registration.
 
+**Accounting correction before stage B:** ADR `0003-forward-budget-accounting.md` qualifies all "H-action budget" wording below as **forward** H actions. Backward H actions were omitted from the original cost wording; the preserved numerical protocol does not match total H work. This correction changes interpretation and metadata, not parameter grids, seeds or selection/training behavior.
+
 ## Stage A: optimization-budget alternative
 
 Use original N=6 h task, architectures, raw/even training, learning rate, validation-based selection, and held-out grids. They are now **development diagnostics**, because round 1 has already revealed their outcomes. Seeds=17/29/43/61/73, full budgets=600/1200/2400 updates. The first 12 existing runs are retained at 600 steps; 48 missing jobs are newly executed. Budgets are separate from-scratch trajectories at matched initializations, not sequentially accumulated compute savings. Checkpoint selection stays based on variational validation energy, not exact labels. Report selected epoch to expose selection effects; lower-error later runs do not prove convergence.
