@@ -139,7 +139,8 @@ def main():
             ax.errorbar(np.arange(6)+(j-2)*.13,y,yerr=[y-lo,hi-y],fmt='o',ms=4,capsize=2,label=method,color=color)
         ax.set(title=arch,xticks=range(6),xticklabels=POLICIES,ylabel='Mean test infidelity',yscale='log')
         ax.tick_params(axis='x',rotation=25);ax.grid(alpha=.2)
-    axes[1].legend(fontsize=8,loc='lower left')
+    handles,labels=axes[1].get_legend_handles_labels()
+    fig.legend(handles,labels,fontsize=8,loc='outside lower center',ncol=5)
     fig.suptitle('Stage B: 2400 forward training + acquisition H actions; mean and seed range (n=5)')
     fig.savefig(OUT/'acquisition_comparison.png',dpi=170);plt.close(fig)
     fig,axes=plt.subplots(2,2,figsize=(10,6.5),layout='constrained')
@@ -152,8 +153,12 @@ def main():
                 vals=[[r['fidelity'] for r in rr if r['lam']==lam] for lam in grid]
                 ax.plot(grid,[np.mean(v) for v in vals],'.-',label=policy,color=color)
                 ax.fill_between(grid,[min(v) for v in vals],[max(v) for v in vals],color=color,alpha=.09)
-            ax.set(xscale='symlog',xlabel='Boundary field lambda / J',ylabel='Ground-state fidelity',
+            ax.set(xlabel='Boundary field lambda / J',ylabel='Ground-state fidelity',
                    title=f'{arch}, {method}',ylim=(0,1.02))
+            ax.set_xscale('symlog',linthresh=6e-5)
+            ax.set_xticks([-.01,-.001,-.0001,0,.0001,.001,.01],
+                          ['-1e-2','-1e-3','-1e-4','0','1e-4','1e-3','1e-2'])
+            ax.tick_params(axis='x',labelsize=8)
             ax.grid(alpha=.2)
     axes[0,0].legend(fontsize=8)
     fig.suptitle('Stage B: held-out signed field, mean and seed range (n=5)')
