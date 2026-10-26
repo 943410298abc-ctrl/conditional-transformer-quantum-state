@@ -132,7 +132,7 @@ tests/                             # 不依赖 ML 框架的基础检查
 
 ## 本地快速检查
 
-需要 Python 3.10+，不需要先安装 PyTorch：
+需要 Python 3.10+。manifest检查不需要PyTorch；研究测试与实验需先安装相应依赖，第七轮使用Python 3.12与requirements-round7-lock.txt：
 
 ```bash
 python scripts/validate_workspace.py
@@ -143,3 +143,9 @@ python scripts/new_run.py --slug tfim-baseline --owner YOUR_GITHUB_ID --issue 1 
 最后一条只**创建实验记录，不会运行模型**。把 `--issue 1` 替换为真实 Issue 编号。
 
 论文进度与待解决问题见 [`docs/STATE.md`](docs/STATE.md)。外部数据、权重、大型中间文件请使用受控存储，提交校验和、获取步骤与必要的聚合统计即可。
+
+## 第七轮本地阶段交付（2026-10-27）
+
+本地任务`local-round7-course-generalization`：固定六自旋、多h能量训练，60组新种子/布点对照；预定主配置训练门槛失败，保留全部负面结果与物理对照。用户将本轮远程发布改为D盘保存，本分支不代表远程main或独立成员确认。
+
+从[阅读与复现入口](docs/round7_reproduction.md)、[阶段报告](docs/round7_report.pdf)和[交接](docs/handoffs/local-round7.md)进入。完整源码、依赖、原始数据及审核记录随包保存；团队正式STATE共识保持原状态。新环境需安装PyTorch等依赖，见requirements-round7-lock.txt；33项测试与60组证据核验可用`python scripts/reproduce_round7.py --mode audit`运行。
