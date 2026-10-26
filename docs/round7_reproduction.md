@@ -2,6 +2,8 @@
 
 本轮执行日期2026-10-27。用户已将GitHub上传改为D盘本地交付；所有新工作在local/round7-course-generalization分支，远程main未修改。最终归档哈希见交付目录delivery_manifest.json；全部主运行的科学源码冻结于3f1aaa9c9faf0ad7045b28b4e095dc2b2a572a6c，来源main为65c367c7115dba578462038fd6cf6c1e5fe64478。
 
+后续发布：D盘快照完成后，用户恢复GitHub上传授权；通过[Issue #15](https://github.com/Bian-M-X/conditional-transformer-quantum-state/issues/15)及fork分支`issue/15-round7-course-generalization`归档并提交审阅。上段保留首次交付时的状态，科学配置与结果未改变。当前协作入口见[发布交接](handoffs/issue-15.md)与[ADR0009](decisions/0009-round7-github-publication.md)。
+
 ## 先读什么
 
 - docs/round7_report.pdf：9页阶段研究报告，按课程要求整理；可编辑源为docs/round7_report.md。
